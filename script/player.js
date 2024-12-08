@@ -693,22 +693,9 @@ function showSpinner(show) {
 // Play/pause functionality with icons
 playButton.addEventListener('click', () => {
 
-             /* if (bit === '00') {
-                    audio.pause();
-                    playButton.innerHTML = '▶';  // Play icon
-                    openPopupWithData(name, img, url);
-                    return;
-              }
-              else if (bit === '001') {
-                    audio.pause();
-                    playButton.innerHTML = '▶';  // Play icon
-                    openPeacefmPopupWithData(name, img, url);
-                    return;
-              }*/
+    if (!isPlaying) {
+                  document.getElementById('ani_equalizer').style.display = 'block';
 
-
-
-              if (!isPlaying) {
                     audio.play();
                     playButton.innerHTML = '||';  // Pause icon
                     showSpinner(false); // Hide the spinner when playing starts
@@ -717,6 +704,7 @@ playButton.addEventListener('click', () => {
                     //initAudioPlayer(url, img, name, bit, location1)
 
               } else {
+                    document.getElementById('ani_equalizer').style.display = 'none';
                     audio.pause();
                     playButton.innerHTML = '▶';  // Play icon
                     isPlaying = false;
