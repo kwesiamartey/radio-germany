@@ -605,7 +605,7 @@ function initAudioPlayer(url, image, stationName, bit, country) {
                 }
             } else {
                 // Use native HTML5 audio for other formats
-                createAudioPlayer(audioUrls, country)
+                createAudioPlayer(url, country)
             }
 
           
